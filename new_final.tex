@@ -1,0 +1,475 @@
+%% LyX 2.4.2.1 created this file.  For more info, see https://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[american]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amstext}
+\usepackage{esint}
+\usepackage{babel}
+\begin{document}
+
+\begin{itemize}
+\item Firms with quantity $O=1$ to sell (supply inelastically because they are importers), choose a share $v$ (volume)
+to move to $G$ (global/major market)
+\item Firms differ in transportation costs (distance) per unit of transported
+volume from major markets $\theta$ with density $f$
+\item Choose local price $p_{l}(\theta)$ but global price determined by
+equilibrium.
+
+\begin{equation}
+\int v(\theta)df(\theta) = Q^{G}(p)
+\label{eq:global_equilibrium}
+\end{equation}
+
+\item Firms maximize profit by choosing share volume $v$ they move to global
+market
+\begin{equation}
+\Pi = \max_{v,p_{l}} \left[ p_{l}(1-v) + v(p-\theta) \right]
+\label{eq:profit_maximization}
+\end{equation}
+
+\item Local demand $Q^{l}(p_l)=Q_{l}p_{l}^{-\varepsilon_{Dl}}$ so $Q^{l}(p_l)/Q_{l}=p_{l}^{-\varepsilon_{Dl}}$
+\item That is the equilibrium local price $p_{l}=(\frac{Q_{l}}{1-v})^{1/\varepsilon_{Dl}}$
+\item So firms maximize
+
+\begin{equation}
+\max_{v} \left[ Q_{l}^{1/\varepsilon_{Dl}}(1-v)^{1-1/\varepsilon_{Dl}} + v(p-\theta) \right]
+\label{eq:maximize_firm_profit}
+\end{equation}
+
+\item We get assuming $\varepsilon_{Dl}>1$: If $\theta>p$ then $v=0$
+and firms don't want to send anything and profit is {[}Think of the
+role of local elasticity{]}
+
+\begin{equation}
+\Pi = Q_{l}^{1/\varepsilon_{Dl}}
+\label{eq:profit_no_shipping}
+\end{equation}
+
+\item If $\theta\leq p$, then $v$ according to, 
+\begin{equation}
+(1-1/\varepsilon_{Dl})Q_{l}^{1/\varepsilon_{Dl}}(1-v)^{-1/\varepsilon_{Dl}} = p - \theta
+\label{eq:optimal_v}
+\end{equation}
+
+\item In summary firms with high transportation cost won't want to send
+oil to the major market. So if the government puts important weight
+on this major market, they might want to introduce oil subsidies.
+\item Notice that if firms could set different prices in the hub, they could
+just repercute the transportation cost to their price, and send some.
+\item Now let's set a uniform oil tax $\tau$ and subsidy per unit
+of moved volume $t(\theta)$
+
+\item Firms maximize profit
+
+\begin{equation}
+\max_{v,p_{l}} \left[ p_{l}(1-\tau)(1-v) + v(p(1-\tau) + t(\theta) - \theta) \right]
+\label{eq:max_profit_tax_subsidy}
+\end{equation}
+
+\item After the local price is set:
+\begin{equation}
+\max_{v} \left[ Q_{l}^{1/\varepsilon_{Dl}}(1-v)^{1-1/\varepsilon_{Dl}}(1-\tau) + v(p(1-\tau) + t(\theta) - \theta) \right]
+\label{eq:max_profit_after_price_set}
+\end{equation}
+
+\item Assuming $\varepsilon > 1$: If $\theta > p(1-\tau_{g}) + t(\theta)$, then $v = 0$, and firms do not send anything. The profit is:
+
+\begin{equation}
+\Pi = Q_{l}^{1/\varepsilon_{Dl}}(1-\tau)
+\label{eq:profit_no_shipping_tax}
+\end{equation}
+
+\item If $\theta \leq p(1-\tau_{g}) + t(\theta)$, then $v$ is determined by:
+\begin{equation}
+(1-1/\varepsilon_{Dl})Q_{l}^{1/\varepsilon_{Dl}}(1-v(\theta))^{-1/\varepsilon_{Dl}}(1-\tau) = p(1-\tau) + t(\theta) - \theta
+\label{eq:optimal_v_tax}
+\end{equation}
+
+\item Government's problem maximize weighted consumer surplus
+\begin{equation}
+\hspace*{-2cm} % Adjust the value to move left
+\max_{t(\theta), \tau_{g}} \left[
+\mu^{G} \int_{p}^{\infty} Q^{G}(p') \, dp' + 
+\mu^{L} \int \int_{p_{l}(\theta)} Q^{L}(p') \, dp' \, df(\theta) + 
+\int \left[ \tau \cdot \left( p_{l}(\theta)(1-v(\theta)) + pv(\theta) \right) - t(\theta)v(\theta) \right] df(\theta)
+\right]
+\label{eq:objective_function}
+\end{equation}
+
+
+
+\noindent subject to:
+\begin{equation}
+\int v(\theta)df(\theta) = Q^{G}(p) = Q_{G}p^{-\varepsilon_{D_{G}}}
+\quad \text{(global market clearing)}
+\label{eq:global_equilibrium_constraint}
+\end{equation}
+
+\begin{equation}
+Q^{L}(p_{l}(\theta)) = Q_{L}p_{l}(\theta)^{-\varepsilon_{Dl}} = 1-v(\theta) \quad \text{(local demand)}
+\label{eq:local_demand_constraint}
+\end{equation}
+
+\begin{equation}
+\hspace*{-2cm} % Adjust the value to move left
+(1-1/\varepsilon_{Dl})Q_{l}^{1/\varepsilon_{Dl}}(1-v(\theta))^{-1/\varepsilon_{Dl}}(1-\tau) = p(1-\tau) + t(\theta) - \theta \quad 
+\text{for } \theta \leq p(1-\tau_{g}) + t(\theta)
+\quad \text{(price equality condition)}
+\label{eq:optimal_v_with_tax_subsidy}
+\end{equation}
+
+\begin{equation}
+\int \tau \left[ p_{l}(\theta)(1-v(\theta)) + pv(\theta) \right] df(\theta) = \int t(\theta)v(\theta)df(\theta) 
+\quad \text{(government budget constraint)}
+\label{eq:government_budget_constraint}
+\end{equation}
+
+\item Will optimize this to find the optimal subsidy schedule.
+\item Let's have linear subsidy $t(\theta)=t\theta$
+\item Send cutoff is then $\theta\leq\frac{p(1-\tau_{g})}{1-t}$, denote
+$\tilde{\theta}$ the minimum cut-off resulting.
+\item The choice of shipped volume below $\tilde{\theta}$ is
+\begin{equation}
+(1-1/\varepsilon_{Dl})Q_{l}^{1/\varepsilon_{Dl}}(1-v(\theta))^{-1/\varepsilon_{Dl}}\frac{\tilde{\theta}}{p} = \tilde{\theta} - \theta \quad \text{for } \theta \leq \tilde{\theta}
+\label{eq:shipped_volume}
+\end{equation}
+
+By rearranging the equality we obtain:
+
+
+
+
+\begin{equation}
+(1-v(\theta)) = \left(\frac{p(\tilde{\theta}-\theta)}{\left(1-\frac{1}{\varepsilon_{Dl}}\right)Q_{l}^{1/\varepsilon_{Dl}}\tilde{\theta}}\right)^{-\varepsilon_{Dl}} = \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)Q_{l}^{1/\varepsilon_{Dl}}\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} = Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} 
+\label{eq: share_total_prod_local}
+\end{equation} 
+
+
+
+
+and then:
+
+\begin{equation}
+(1-v(\theta))^{\frac{\varepsilon_{Dl}-1}{\varepsilon_{Dl}}} = \left(\frac{p(\tilde{\theta}-\theta)}{\left(1-\frac{1}{\varepsilon_{Dl}}\right)Q_{l}^{1/\varepsilon_{Dl}}\tilde{\theta}}\right)^{-(\varepsilon_{Dl}-1)} = \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)Q_{l}^{1/\varepsilon_{Dl}}\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{(\varepsilon_{Dl}-1)} 
+\label{eq: share_total_prod_local}
+\end{equation} 
+
+\begin{equation}
+(1-v(\theta))^{\frac{\varepsilon_{Dl}-1}{\varepsilon_{Dl}}} = Q_{l}^{\frac{\varepsilon_{Dl}-1}{\varepsilon_{Dl}}} \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{(\varepsilon_{Dl}-1)}
+\label{eq: share_total_prod_local_simplified}
+\end{equation} 
+
+
+
+\item The objective:
+\begin{equation}
+CS_{L}(\theta) = \int_{p_{l}(\theta)}^{\infty} Q^{L}(p) \, dp = \int_{p_{l}(\theta)}^{\infty} Q_{L} \cdot p^{-\varepsilon_{Dl}} \, dp = \frac{Q_{L}}{\varepsilon_{Dl}-1} \cdot p_{l}(\theta)^{-(\varepsilon_{Dl}-1)} = \frac{Q_{L}}{\varepsilon_{Dl}-1} \cdot p_{l}(\theta)^{1-\varepsilon_{Dl}}
+\label{eq:consumer_surplus_L_initial}
+\end{equation}
+
+\item Developing it further:
+\begin{equation}
+CS_{L}(\theta) = \frac{Q_{L}}{\varepsilon_{Dl}-1} \cdot \left(\frac{1-v}{Q_{L}}\right)^{\frac{\varepsilon_{Dl}-1}{\varepsilon_{Dl}}} = \frac{Q_{L}^{\frac{1}{\varepsilon_{Dl}}}}{\varepsilon_{Dl}-1} \cdot (1-v)^{\frac{\varepsilon_{Dl}-1}{\varepsilon_{Dl}}}
+\label{eq:consumer_surplus_L_final}
+\end{equation}
+
+
+\begin{equation}
+CS_{L}(\theta) = \frac{Q_{L}^{\frac{1}{\varepsilon_{Dl}}}}{\varepsilon_{Dl}-1} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)Q_{l}^{1/\varepsilon_{Dl}}\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{(\varepsilon_{Dl}-1)} = \frac{Q_{L}}{\varepsilon_{Dl}-1} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{(\varepsilon_{Dl}-1)}
+\label{eq:consumer_surplus_L_theta}
+\end{equation}
+
+\begin{equation}
+CS_{G} = \int_{p}^{\infty} Q^{G}(p) \, dp = \int_{p}^{\infty} Q_{G} \cdot p^{-\varepsilon_{DG}} \, dp = \frac{Q_{G}}{\varepsilon_{DG}-1} \cdot p^{-(\varepsilon_{DG}-1)} = \frac{Q_{G}}{\varepsilon_{DG}-1} \cdot p^{1-\varepsilon_{DG}}
+\label{eq:consumer_surplus_G}
+\end{equation}
+
+\item Budget constraint
+
+\begin{equation}
+\int \tau \left[ p_{l}(\theta)(1-v(\theta)) + pv(\theta) \right] df(\theta) = t \int \theta v(\theta) df(\theta)
+\label{eq:budget_constraint1}
+\end{equation}
+
+\begin{equation}
+\int \tau p_{l}(\theta)(1-v(\theta)) df(\theta) + \tau Q_{G}p^{1-\varepsilon_{D_{G}}} = t \int \theta v(\theta) df(\theta)
+\label{eq:budget_constraint2}
+\end{equation}
+
+\begin{equation}
+\tau p_{l}(1-v) = \tau Q_{L} \left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}-1} \left( \frac{\tilde{\theta}}{p(\tilde{\theta}-\theta)} \right)^{\varepsilon_{Dl}-1}
+\label{eq:price_tax_relationship}
+\end{equation}
+
+\begin{equation}
+tv(\theta)\theta = t\theta \left[ 1 - \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)Q_{l}^{1/\varepsilon_{Dl}}\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} \right] = t\theta \left[ 1 - Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} \right]
+\label{eq:subsidy_equation}
+\end{equation}
+
+\begin{equation}
+\hspace*{-2cm} % Adjust the value to move left
+\tau Q_{L} \left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}-1} \int \left( \frac{\tilde{\theta}}{p(\tilde{\theta}-\theta)} \right)^{\varepsilon_{Dl}-1} df(\theta) + \tau Q_{G}p^{1-\varepsilon_{D_{G}}} =
+t \int \theta \left[ 1 - Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} \right] df(\theta)
+\label{eq:integral_constraint}
+\end{equation}
+
+\item Maximization of weighted surplus:
+\begin{equation}
+\max_{t, \tau, p} \left[
+\mu^{G}\frac{Q_{G}}{\varepsilon_{DG}-1} \cdot p^{1-\varepsilon_{DG}} + 
+\mu^{L} \int_{0}^{\tilde{\theta}} \frac{Q_{L}}{\varepsilon_{Dl}-1} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{(\varepsilon_{Dl}-1)} df(\theta)
+\right]
+\label{eq:max_weighted_surplus}
+\end{equation}
+
+
+\item  subject to the budget constraint:
+\begin{equation}
+\hspace*{-2cm} % Adjust the value to move left
+\tau Q_{L} \left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}-1} \int \left( \frac{\tilde{\theta}}{p(\tilde{\theta}-\theta)} \right)^{\varepsilon_{Dl}-1} df(\theta) + \tau Q_{G}p^{1-\varepsilon_{D_{G}}} =
+t \int \theta \left[ 1 - Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} \right] df(\theta)
+\label{eq:budget_constraint_3}
+\end{equation}
+
+
+
+
+\item global market clearing
+\begin{equation}
+\int_{0}^{\tilde{\theta}}\left[ 1 - Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} \right] df(\theta) = Q_{G}p^{-\varepsilon_{D_{G}}}
+\label{eq:market_clearing_condition}
+\end{equation}
+
+\item Cutoff:
+\begin{equation}
+\tilde{\theta} = \frac{p(1-\tau_{g})}{1-t}
+\label{eq:cutoff_condition}
+\end{equation}
+
+\end{itemize}
+
+Assuming \( f(\theta) = 1 \) , we can rewrite the objective function and the constraints. The integral on the left hand side of the market clearing condition can then be easily computed:
+
+\[
+\int_{0}^{\tilde{\theta}} \left[ 1 - Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} \right] d\theta
+\]
+
+The first term becomes:
+
+\[
+ \int_{0}^{\tilde{\theta}} 1 \, d\theta = \tilde{\theta}
+\]
+
+For the second term, we have:
+
+\[
+ \int_{0}^{\tilde{\theta}} Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} d\theta = Q_{l} \cdot \left( \frac{\left( 1-\frac{1}{\varepsilon_{Dl}} \right)  \tilde{\theta}}{p} \right)^{\varepsilon_{Dl}} \int_{0}^{\tilde{\theta}} \frac{1}{(\tilde{\theta} - \theta)^{\varepsilon_{Dl}}} \, d\theta
+\] 
+
+
+Using the substitution \( u = \tilde{\theta} - \theta \) we get:
+
+
+\begin{equation}
+\int_{0}^{\tilde{\theta}} \frac{1}{(\tilde{\theta} - \theta)^{\varepsilon_{Dl}}} \, d\theta = \int_{\tilde{\theta}}^{0} u^{-\varepsilon_{Dl}} (-du) =  \int_{0}^{\tilde{\theta}} u^{-\varepsilon_{Dl}} \, du = \frac{u^{1-\varepsilon_{Dl}}}{1-\varepsilon_{Dl}} \Big|_{0}^{\tilde{\theta}} = \frac{\tilde{\theta}^{1-\varepsilon_{Dl}}}{1-\varepsilon_{Dl}}
+\label{eq:integral_substitution_market_clearing}
+\end{equation}
+
+The second term becomes:
+
+\[
+ Q_{l} \cdot \left( \frac{\left( 1-\frac{1}{\varepsilon_{Dl}} \right)  \tilde{\theta}}{p} \right)^{\varepsilon_{Dl}} \cdot \frac{\tilde{\theta}^{1-\varepsilon_{Dl}}}{1-\varepsilon_{Dl}}.
+\]
+
+Simplifying further, we get:
+
+\[
+ Q_{l} \cdot \frac{\left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}}  \cdot \tilde{\theta} }{p^{\varepsilon_{Dl}} (1-\varepsilon_{Dl})}
+\]
+
+Combining the first and second terms, we get:
+
+\[
+\tilde{\theta} -  Q_{l} \cdot \frac{\left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}}  \cdot \tilde{\theta} }{p^{\varepsilon_{Dl}} (1-\varepsilon_{Dl})} = \tilde{\theta} + Q_{l} \cdot \frac{\left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}}  \cdot \tilde{\theta} }{p^{\varepsilon_{Dl}} (\varepsilon_{Dl}-1)}
+\]
+
+The market clearing condition can then be rewritten as:
+
+
+\begin{equation}
+\tilde{\theta} + Q_{l} \cdot \frac{\left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}}  \cdot \tilde{\theta} }{p^{\varepsilon_{Dl}} (\varepsilon_{Dl}-1)} =  Q_{G}p^{-\varepsilon_{D_{G}}}
+\label{eq:market_clearing_condition_simplified}
+\end{equation}\\
+
+
+
+ Now we will consider the budget constraint (\ref{eq:budget_constraint_3}). By using the same substitution technique as in \ref{eq:integral_substitution_market_clearing}, the integral on the left hand side of the equation can be written as::
+
+\begin{equation}
+\int_{0}^{\tilde{\theta}} \frac{1}{(\tilde{\theta} - \theta)^{\varepsilon_{Dl}-1}} \, d\theta = \int_{\tilde{\theta}}^{0} u^{-(\varepsilon_{Dl}-1)} (-du) =  \int_{0}^{\tilde{\theta}} u^{-(\varepsilon_{Dl}-1)} \, du = \frac{u^{2-\varepsilon_{Dl}}}{2-\varepsilon_{Dl}} \Big|_{0}^{\tilde{\theta}} = \frac{\tilde{\theta}^{2-\varepsilon_{Dl}}}{2-\varepsilon_{Dl}}
+\label{eq:integral_substitution_budget_constraint}
+\end{equation}\\
+ 
+
+The left-hand side of the equation of the budget constraint can then be simplified  as:
+\[
+\tau Q_{L} \left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}-1} \cdot \frac{\tilde{\theta}^{\varepsilon_{Dl}-1}}{p^{\varepsilon_{Dl}-1}} \cdot \frac{\tilde{\theta}^{2-\varepsilon_{Dl}}}{2-\varepsilon_{Dl}} + \tau Q_{G}p^{1-\varepsilon_{D_{G}}} =  \frac{\tau Q_{L} \cdot \theta }{p^{\varepsilon_{Dl}-1}\cdot (2-\varepsilon_{Dl})}  \left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}-1} + \tau Q_{G}p^{1-\varepsilon_{D_{G}}}
+\]\\
+
+
+Now we will focus on the right hand side: 
+
+We are still assuming \( f(\theta) = 1 \) (uniform distribution). The term on the right-hand side of the budget constraint can then be computed:
+
+\[
+t \int \theta \left[ 1 - Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} \right]  \, d\theta.
+\]
+
+The first term becomes:
+
+\[
+t \int_{0}^{\tilde{\theta}} \theta \, d\theta = t  \cdot \frac{\theta^2}{2} \Big|_{0}^{\tilde{\theta}} = t \cdot \frac{\tilde{\theta}^2}{2}.
+\]
+
+For the second term, we have:
+
+\[
+t  \int_{0}^{\tilde{\theta}} \theta  \cdot Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p(\tilde{\theta}-\theta)}\right)^{\varepsilon_{Dl}} \, d\theta = t   \cdot Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p}\right)^{\varepsilon_{Dl}} \cdot  \int_{0}^{\tilde{\theta}} \frac{\theta}{(\tilde{\theta} - \theta)^{\varepsilon_{Dl}}} \, d\theta.
+\]
+
+Using the substitution \( u = \tilde{\theta} - \theta \), we have:
+
+\begin{equation}
+\int_{0}^{\tilde{\theta}} \frac{\theta}{(\tilde{\theta} - \theta)^{\varepsilon_{Dl}}} \, d\theta = \int_{\tilde{\theta}}^{0} \frac{\tilde{\theta} - u}{u^{\varepsilon_{Dl}}} (-du) = \int_{0}^{\tilde{\theta}} \frac{\tilde{\theta}}{u^{\varepsilon_{Dl}}} \, du - \int_{0}^{\tilde{\theta}} u^{-(\varepsilon_{Dl} - 1)} \, du.
+\label{eq:split_integral}
+\end{equation}
+
+Each term is computed as follows:
+For the first term:
+\[
+\int_{0}^{\tilde{\theta}} \frac{\tilde{\theta}}{u^{\varepsilon_{Dl}}} \, du = \tilde{\theta} \int_{0}^{\tilde{\theta}} u^{-\varepsilon_{Dl}} \, du = \tilde{\theta} \cdot \frac{u^{1 - \varepsilon_{Dl}}}{1 - \varepsilon_{Dl}} \Big|_{0}^{\tilde{\theta}} = \frac{\tilde{\theta} \cdot \tilde{\theta}^{1 - \varepsilon_{Dl}}}{1 - \varepsilon_{Dl}} = \frac{\tilde{\theta}^{2 - \varepsilon_{Dl}}}{1 - \varepsilon_{Dl}}.
+\]
+
+For the second term:
+\[
+\int_{0}^{\tilde{\theta}} u^{-(\varepsilon_{Dl} - 1)} \, du = \frac{u^{2 - \varepsilon_{Dl}}}{2 - \varepsilon_{Dl}} \Big|_{0}^{\tilde{\theta}} = \frac{\tilde{\theta}^{2 - \varepsilon_{Dl}}}{2 - \varepsilon_{Dl}}.
+\]
+
+Combining the two terms, we get:
+
+\[
+\int_{0}^{\tilde{\theta}} \frac{\theta}{(\tilde{\theta} - \theta)^{\varepsilon_{Dl}}} \, d\theta = \frac{\tilde{\theta}^{2 - \varepsilon_{Dl}}}{1 - \varepsilon_{Dl}} - \frac{\tilde{\theta}^{2 - \varepsilon_{Dl}}}{2 - \varepsilon_{Dl}} = \frac{\tilde{\theta}^{2 - \varepsilon_{Dl}}}{(1 - \varepsilon_{Dl})(2 - \varepsilon_{Dl})}
+\]
+
+The second term becomes:
+
+\[
+t   \cdot Q_{l} \cdot \left(\frac{\left(1-\frac{1}{\varepsilon_{Dl}}\right)\tilde{\theta}}{p}\right)^{\varepsilon_{Dl}} \cdot   \frac{\tilde{\theta}^{2 - \varepsilon_{Dl}}}{(1 - \varepsilon_{Dl})(2 - \varepsilon_{Dl})}
+\]
+
+Simplifying further, we get:
+
+\[
+t \cdot \tilde{\theta}^2 \cdot \frac{\left( 1 - \frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}} Q_L}{p^{\varepsilon_{Dl}} (1 - \varepsilon_{Dl})(2 - \varepsilon_{Dl})}
+\]
+
+Combining the first and second terms, we have:
+
+\[
+t \cdot \tilde{\theta}^2 \cdot\left[\frac{1}{2} -   \frac{\left( 1 - \frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}} Q_L}{p^{\varepsilon_{Dl}} (1 - \varepsilon_{Dl})(2 - \varepsilon_{Dl})}) \right]
+\]
+
+The budget constraint can then be expressed as:
+
+\[
+ \frac{\tau Q_{L} \cdot \theta }{p^{\varepsilon_{Dl}-1}\cdot (2-\varepsilon_{Dl})}  \left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}-1} + \tau Q_{G}p^{1-\varepsilon_{D_{G}}} = t \cdot \tilde{\theta}^2 \cdot\left[\frac{1}{2} -   \frac{\left( 1 - \frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}} Q_L}{p^{\varepsilon_{Dl}} (1 - \varepsilon_{Dl})(2 - \varepsilon_{Dl})}) \right]
+\]
+
+Replacing $\tilde{\theta}$, we get:
+
+
+
+\begin{equation}
+\hspace*{-2cm} 
+\frac{p(1-\tau_{g})}{1-t} \cdot \frac{\tau Q_{L}}{p^{\varepsilon_{Dl}-1} (2-\varepsilon_{Dl})}\left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}-1} + 
+\tau Q_{G}p^{1-\varepsilon_{D_{G}}} = t  \cdot \left[\ \frac{p(1-\tau_{g})}{1-t} \right]^2 \cdot\left[\frac{1}{2} -   \frac{\left( 1 - \frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}} Q_L}{p^{\varepsilon_{Dl}} (1 - \varepsilon_{Dl})(2 - \varepsilon_{Dl})}) \right]
+\label{eq:budget_constraint_simplified}
+\end{equation}
+
+
+
+
+
+Now, doing the same substitution as \ref{eq:integral_substitution_budget_constraint}, we can simplify the objective function (\ref{eq:max_weighted_surplus}):
+
+
+
+
+
+\[
+\max_{t, \tau, p} \left[
+\mu^{G} \frac{Q_{G}}{\varepsilon_{DG}-1} \cdot p^{-(\varepsilon_{DG}-1)} + 
+\mu^{L} \frac{Q_{L}}{\varepsilon_{DL} - 1} \cdot \left( \frac{\left( 1 - \frac{1}{\varepsilon_{DL}} \right) \tilde{\theta}}{p} \right)^{\varepsilon_{DL} - 1} \cdot \frac{\tilde{\theta}^{2 - \varepsilon_{DL}}}{2 - \varepsilon_{DL}}
+\right]
+\]
+
+By further simplifying we get:
+
+\[
+\max_{t, \tau, p} \left[
+\mu^{G} \frac{Q_{G}}{(\varepsilon_{DG}-1) } \cdot p^{-(\varepsilon_{DG}-1)} + 
+\mu^{L} \frac{Q_{L} \cdot \theta}{(\varepsilon_{DL} - 1) \cdot (2 - \varepsilon_{DL})} \cdot \left( \frac{1 - \frac{1}{\varepsilon_{DL}}  }{p} \right)^{\varepsilon_{DL} - 1} 
+\right]
+\]
+
+Replacing $\tilde{\theta}$, we get:
+
+
+\begin{equation}
+\max_{t, \tau, p} \left[
+\mu^{G} \frac{Q_{G}}{(\varepsilon_{DG}-1) } \cdot p^{-(\varepsilon_{DG}-1)} + 
+\mu^{L} \frac{Q_{L} \cdot \frac{p(1-\tau_{g})}{1-t}}{(\varepsilon_{DL} - 1) \cdot (2 - \varepsilon_{DL})} \cdot \left( \frac{1 - \frac{1}{\varepsilon_{DL}}  }{p} \right)^{\varepsilon_{DL} - 1} 
+\right]
+\label{eq:max_weighted_surplus_simplified}
+\end{equation}\\
+
+
+
+
+Finally by combining everything toghether, we get the following simplified version of the problem:
+
+\begin{itemize}
+    \item Maximization of weighted surplus:
+    \begin{equation}
+\max_{t, \tau, p} \left[
+\mu^{G} \frac{Q_{G}}{(\varepsilon_{DG}-1) } \cdot p^{-(\varepsilon_{DG}-1)} + 
+\mu^{L} \frac{Q_{L} \cdot \frac{p(1-\tau_{g})}{1-t}}{(\varepsilon_{DL} - 1) \cdot (2 - \varepsilon_{DL})} \cdot \left( \frac{1 - \frac{1}{\varepsilon_{DL}}  }{p} \right)^{\varepsilon_{DL} - 1} 
+\right]
+    \label{eq:max_weighted_surplus_simplified_model}
+    \end{equation}
+    
+    \item Subject to the budget constraint:
+    \begin{equation}
+\hspace*{-2cm} 
+\frac{p(1-\tau_{g})}{1-t} \cdot \frac{\tau Q_{L}}{p^{\varepsilon_{Dl}-1} (2-\varepsilon_{Dl})}\left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}-1} + 
+\tau Q_{G}p^{1-\varepsilon_{D_{G}}} = t  \cdot \left[\ \frac{p(1-\tau_{g})}{1-t} \right]^2 \cdot\left[\frac{1}{2} -   \frac{\left( 1 - \frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}} Q_L}{p^{\varepsilon_{Dl}} (1 - \varepsilon_{Dl})(2 - \varepsilon_{Dl})}) \right]
+    \label{eq:budget_constraint_simplified_model}
+    \end{equation}
+    
+    \item Global market clearing:
+    \begin{equation}
+\frac{p(1-\tau_{g})}{1-t} \cdot \left[\ 1+ \frac{\left( 1-\frac{1}{\varepsilon_{Dl}} \right)^{\varepsilon_{Dl}} Q_{L}  }{p^{\varepsilon_{Dl}} (\varepsilon_{Dl}-1)} \right]=  Q_{G}p^{-\varepsilon_{D_{G}}}
+    \label{eq:market_clearing_condition_simplified_model}
+    \end{equation}
+\end{itemize}
+
+
+
+
+
+Now we want to solve the problem
+
+
+
+\end{document}
